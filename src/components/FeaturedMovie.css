@@ -1,0 +1,2 @@
+.featured{height:100vh}.featured--vertical{width:inherit;height:inherit;background:-webkit-gradient(linear, left bottom, left top, color-stop(10%, #111), color-stop(90%, transparent));background:linear-gradient(to top, #111 10%, transparent 90%)}.featured--horizontal{width:inherit;height:inherit;background:-webkit-gradient(linear, left top, right top, color-stop(30%, #111), color-stop(70%, transparent));background:linear-gradient(to right, #111 30%, transparent 70%)}
+/*# sourceMappingURL=FeaturedMovie.css.map */
