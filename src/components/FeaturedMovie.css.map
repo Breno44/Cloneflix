@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,SAAS,AAAC,CACN,MAAM,CAAE,KAAK,CAChB,AAED,AAAA,mBAAmB,AAAC,CAChB,KAAK,CAAE,OAAO,CACd,MAAM,CAAE,OAAO,CACf,UAAU,CAAE,kDAAkD,CACjE,AAED,AAAA,qBAAqB,AAAC,CAClB,KAAK,CAAE,OAAO,CACd,MAAM,CAAE,OAAO,CACf,UAAU,CAAE,oDAAoD,CACnE",
+    "sources": [
+        "FeaturedMovie.scss"
+    ],
+    "names": [],
+    "file": "FeaturedMovie.css"
+}

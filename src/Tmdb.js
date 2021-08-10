@@ -28,7 +28,7 @@ export default {
             },
             {
                 slug: 'action',
-                title: 'Acao',
+                title: 'Ação',
                 items: await basicFetch(`/discover/movie?with_genres=28&language=pt-BR&api_key=${API_KEY}`)
             },
             {
@@ -48,9 +48,28 @@ export default {
             },
             {
                 slug: 'documentary',
-                title: 'Documentarios',
+                title: 'Documentários',
                 items: await basicFetch(`/discover/movie?with_genres=99&language=pt-BR&api_key=${API_KEY}`)
             },
         ];
+    },
+    getMovieInfo: async (movieId, type) => {
+        let info = {};
+
+        if(movieId) {
+            // eslint-disable-next-line default-case
+            switch(type) {
+                case 'movie':
+                    info = await basicFetch(`/movie/${movieId}?language=pt-BR&api_key=${API_KEY}`);
+                break;
+                case 'tv':
+                    info = await basicFetch(`/tv/${movieId}?language=pt-BR&api_key=${API_KEY}`);
+                break;
+                default: 
+                    info = null;
+            }
+        }
+
+        return info;
     }
 }
