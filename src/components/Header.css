@@ -1,0 +1,2 @@
+header{position:fixed;z-index:1000;top:0;left:0;right:0;height:70px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding:0 30px;background-color:transparent;-webkit-transition:all ease 0.4s;transition:all ease 0.4s}header.black{background-color:#141414}.header--logo{height:30px}.header--logo img{height:100%}
+/*# sourceMappingURL=Header.css.map */
