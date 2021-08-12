@@ -12,22 +12,28 @@ export default () => {
 
   const [ featuredData, setFeaturedData ] = useState(null);
 
-  const [ blackHeader, setBlackHeader ] = useState(false);
+  const [ blackHeader, setBlackHeader ] = useState(false); 
 
   useEffect(() => {
     const loadAll = async () => {
       let list = await Tmdb.getHomeList();
-      setMovieList(list)
+      setTimeout(() => {
+        setMovieList(list)
+      }, 2000)
 
       let originals = list.filter(i=>i.slug === "originals");
       let randomChosen = Math.floor(Math.random() * (originals[0].items.results.length - 1))
       let chosen = originals[0].items.results[randomChosen];
       let chosenInfo = await Tmdb.getMovieInfo(chosen.id, 'tv');
-      setFeaturedData(chosenInfo);
+
+      setTimeout(() => {
+        setFeaturedData(chosenInfo);
+      }, 1500)
     }
 
     loadAll()
   }, []);
+
 
   useEffect(() => {
     const scrollListener = () => {
@@ -65,6 +71,12 @@ export default () => {
           Direitos de imagem para netflix<br/>
           Dados pegos do site Themoviedb.org
         </footer>
+
+        {movieList.length <= 0 && 
+            <div className="loading">
+              <img src="https://media.filmelier.com/noticias/br/2020/03/Netflix_LoadTime.gif" alt="loading"/>
+            </div>
+        }
     </div>
   );
 }
